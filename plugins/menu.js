@@ -38,7 +38,6 @@ const defaultMenu = {
   before: `
 ╔════════════════╗
 ╠➤👤𝙊𝙬𝙣𝙚𝙧 : ${global.ownername}
-╠➤💻𝘾𝙧𝙚𝙖𝙩𝙤𝙧 : 𝙂𝙚𝙢𝙥𝙮
 ╠➤⏰𝙐𝙥𝙩𝙞𝙢𝙚 : %uptime
 ╠➤🗓️𝙏𝙖𝙣𝙜𝙜𝙖𝙡: %date
 ╚═══════╦════════╝
@@ -53,8 +52,6 @@ const defaultMenu = {
   body: '╠✠ %cmd %islimit %isPremium',
   footer: '╠════════════════╝\n╠════════════════╗',
   after: `${global.namabot}
-*𝐏𝐫𝐨𝐣𝐞𝐜𝐭 𝐢𝐧𝐢 𝐝𝐢𝐛𝐮𝐚𝐭 𝐨𝐥𝐞𝐡 ${global.ownername}
-${global.ownerinsta}
 `,
 }
 let handler = async (m, { conn, usedPrefix: _p }) => {
@@ -159,9 +156,8 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
     let url = `https://i.postimg.cc/nrMn3sMN/menu.jpg`
     conn.sendHydrated(m.chat, text.trim(), 'ℙ𝔼𝕄𝔹𝕌𝔸𝕋 𝕊ℂ ➢ 𝔾𝔼𝕄ℙ𝕐', null, 'https://www.youtube.com/channel/UCZoVmApPxtLYgUWwBD4nbCw', 'ʏᴏᴜᴛᴜʙᴇ ɢᴇᴍᴘʏ', '', '', [
-      ['𝗚𝗥𝗨𝗣 𝗕𝗢𝗧', '/donasi'],
-      ['𝗝𝗔𝗦𝗔 𝗥𝗨𝗡', '/sewa'],
-      ['✿𝗢𝗪𝗡𝗘𝗥✿', '/owner']
+      ['𝗚𝗥𝗨𝗣 AeroInfo', '/donasi'],
+      ['𝗢𝗪𝗡𝗘𝗥 BOT', '/owner']
     ], m)
     /*let url = `https://telegra.ph/file/ab1df70dfd5c2bac64da1.jpg`.trim()
     let res = await fetch(url)
@@ -199,7 +195,7 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
                 }), { userJid: m.chat, quoted: m })
                 conn.relayMessage(m.chat, template.message, { messageId: template.key.id })*/
   } catch (e) {
-    conn.reply(m.chat, 'Maaf, menu sedang error', m)
+    conn.reply(m.chat, 'Maaf, menu sedang maintenance', m)
     throw e
   }
 }
@@ -223,17 +219,17 @@ function clockString(ms) {
 
 function ucapan() {
         const hour_now = moment.tz('Asia/Jakarta').format('HH')
-        var ucapanWaktu = 'Pagi kak'
+        var ucapanWaktu = 'Selamat Pagi'
         if (hour_now >= '03' && hour_now <= '10') {
-          ucapanWaktu = 'Pagi kak'
+          ucapanWaktu = 'Selamat Pagi'
         } else if (hour_now >= '10' && hour_now <= '15') {
-          ucapanWaktu = 'Siang kak'
+          ucapanWaktu = 'Selamat Siang'
         } else if (hour_now >= '15' && hour_now <= '17') {
-          ucapanWaktu = 'Sore kak'
+          ucapanWaktu = 'Selamat Sore'
         } else if (hour_now >= '17' && hour_now <= '18') {
-          ucapanWaktu = 'Selamat Petang kak'
+          ucapanWaktu = 'Selamat Petang'
         } else if (hour_now >= '18' && hour_now <= '23') {
-          ucapanWaktu = 'Malam kak'
+          ucapanWaktu = 'Selamat Malam'
         } else {
           ucapanWaktu = 'Selamat Malam!'
         }	
